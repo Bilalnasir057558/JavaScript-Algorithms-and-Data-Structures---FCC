@@ -1,0 +1,130 @@
+*, 
+*::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: #000957;
+  --light-blue: #344CB7;
+  --yellow: #FFEB00; 
+  --success: #22c55e;
+  --error: #ef4444;
+}
+
+body {
+  font-size: 62.5%;
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Slab";
+  gap: 2rem;
+}
+
+h1 {
+  color: white;
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin: 5rem 0 0 0;
+  text-align: center;
+}
+
+#input-section, #result-container {
+  background-color: var(--light-blue);
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 0.7rem;
+  border: 3px dashed var(--yellow);
+  gap: 0.8rem;
+}
+
+#input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+#number {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+#number:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(250, 204, 21, 0.5);
+}
+#button-container {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.4rem;
+  padding: 0.5rem;
+}
+
+#convert-btn {
+  font-family: "Roboto Slab";
+  font-size: 1.3rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-blue);
+  background-color: var(--yellow);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+#convert-btn:hover {
+  background-color: var(--dark-blue);
+  color: white;
+  border: 2px solid var(--yellow);
+  transform: scale(1.05);
+}
+
+#convert-btn:active {
+  transform: scale(0.97);
+}
+
+#output {
+  font-size: 1.8rem;
+  align-self: center;
+  padding: 0.5rem;
+}
+.success {
+  color: var(--success);
+  animation: pop 0.5s ease;
+}
+.error {
+  color: var(--error);
+  animation: shake 0.3s ease;
+}
+
+@keyframes pop {
+  0% {transform: scale(0.9);}
+  100% {transform: scale(1.05);}
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
