@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #ad5389, #3c1053);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Arial"
+}
+
+h1 {
+  text-align: center;
+  margin: 15px 0;
+  color: white;
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+
+.register {
+  width: 480px;
+  background: #ccc;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px black;
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #ad5389;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+#item-price {
+  font-weight: bold;
+  padding: 0 0 5px 5px;
+}
+
+.screen input{
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.screen button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background-color: #3c1053;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.screen button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.change-due {
+  font-family: "System-ui";
+}
+
+.drawer-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.drawer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: #999;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 6px 0;
+}
+
+.drawer p{
+  font-weight: 600;
+}
