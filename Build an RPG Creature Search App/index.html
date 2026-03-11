@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPG Creature Search App</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main>
+    <h1>RPG Creature Search App</h1>
+    <div class="app">
+      <div class="input-container">
+        <input type="string" id="search-input" placeholder="Enter creature's Id or name" required/>
+        <button type="button" id="search-button">Search</button>
+      </div>
+      <div class="name-container">
+        <div class="personal-details-container">
+          <h3>
+            <span id="creature-name"></span>
+            <span id="creature-id"></span>
+          </h3>
+        
+          <p id="weight"></p>
+
+          <p id="height"></p>
+        </div>
+        <div id="types">
+        </div>
+      </div>
+      <div class="details-container">
+        <div class="detail">
+          <p>HP</p>
+          <p id="hp">0</p>
+        </div>
+        <div class="detail">
+          <p>Attack</p>
+          <p id="attack">0</p>
+        </div>
+        <div class="detail">
+          <p>Defense</p>
+          <p id="defense">0</p>
+        </div>
+        <div class="detail">
+          <p>Special Attack</p>
+          <p id="special-attack">0</p>
+        </div>
+        <div class="detail">
+          <p>Special Defense</p>
+          <p id="special-defense">0</p>
+        </div>
+        <div class="detail">
+          <p>Speed</p>
+          <p id="speed">0</p>
+        </div>
+       
+      </div>
+    </div>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
