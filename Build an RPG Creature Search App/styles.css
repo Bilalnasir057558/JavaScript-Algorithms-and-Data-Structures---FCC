@@ -1,0 +1,162 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-brown: #452829;
+  --skin: #E8D1C5;
+  --light-skin: #E8D1C5;
+  --dark-gray: #57595B;
+  --light-gray: #ccc;
+  --khaki: #CDB885;
+}
+
+body {
+  height: 100vh;
+  font-family: "Aldrich", "sans-serif";
+  background: linear-gradient(to bottom, var(--dark-brown), var(--skin), var(--light-skin));
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: clamp(2rem, 4vw, 4rem);
+  text-align: center;
+}
+
+.app {
+  width: 500px;
+  min-width: 360px;
+  background: var(--dark-brown);
+  border-radius: 20px;
+  box-shadow: 0 0 30px var(--light-skin);
+}
+
+.input-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-family: "Aldrich";
+}
+
+.input-container button {
+  font-size: 1rem;
+  padding: 5px 12px;
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  background: var(--light-skin);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: "Aldrich";
+   
+}
+
+.input-container button:hover {
+  transform: scale(1.05);
+  background: var(--khaki);
+  color: white;
+}
+
+.name-container {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.personal-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.personal-details-container p {
+  font-size: 1.1rem;
+}
+
+#weight, #height {
+  font-weight: 600;
+}
+
+#creature-name {
+  font-size: 1.5rem;
+}
+
+#creature-id {
+  font-style: italic;
+  
+}
+
+#types {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type {
+  background: #77dff4;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.details-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-gray);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.detail p {
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.detail p:last-of-type {
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 460px) {
+  .app {
+    width: 90%;
+  }
+  .input-container button {
+    width: 100%;
+  }
+}
